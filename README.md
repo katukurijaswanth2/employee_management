@@ -49,18 +49,29 @@ Database Design
 | Column     | Type     | Description                |
 
 API Endpoints
-| ---------- | -------- | -------------------------- |
-| id         | INT (PK) | Auto-generated Employee ID |
-| name       | VARCHAR  | Employee name              |
-| email      | VARCHAR  | Unique email ID            |
-| department | VARCHAR  | Department name            |
-| salary     | DOUBLE   | Monthly salary             |
+| Method | Endpoint                              | Description                    |
+| ------ | ------------------------------------- | ------------------------------ |
+| GET    | `/api/employees`                      | Get all employees              |
+| GET    | `/api/employees/{id}`                 | Get employee by ID             |
+| POST   | `/api/employees`                      | Add a new employee             |
+| PUT    | `/api/employees/{id}`                 | Update existing employee       |
+| DELETE | `/api/employees/{id}`                 | Delete employee by ID          |
+| GET    | `/api/employees/search?department=IT` | Search employees by department |
+
 
 Setup & Run Instructions
+1. Clone the Repository
 git clone https://github.com/katukurijaswanth2/employee_management.git
 cd employee_management
+
 2. Configure Database
 
 Open src/main/resources/application.properties and update:
+spring.datasource.url=jdbc:mysql://localhost:3306/employee_db?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+3. Run the Application
+mvn spring-boot:run
+
 
 
