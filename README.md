@@ -1,24 +1,66 @@
-# Employee Management System (Spring Boot)
+A Java Spring Boot Project by Jaswanth Katukuri (MCA Graduate)
+Project Overview
 
-## Overview
-Simple backend-only Spring Boot project for managing employees.
-Includes CRUD APIs, validation, exception handling, and sample data.
+The Employee Management System (EMS) is a backend web application developed using Spring Boot and MySQL.
+It helps organizations manage employee information efficiently by providing secure CRUD (Create, Read, Update, Delete) operations through RESTful APIs.
 
-## Run locally (quick)
-1. Java 17+ and Maven installed.
-2. From project root run:
-   mvn spring-boot:run
-3. The app runs at http://localhost:8080
-4. APIs:
-   GET  /api/employees
-   GET  /api/employees/{id}
-   POST /api/employees
-   PUT  /api/employees/{id}
-   DELETE /api/employees/{id}
-   GET  /api/employees/search?department=IT
+This project demonstrates my understanding of Spring Boot architecture, RESTful services, and database integration using JPA (Hibernate) — developed as part of my learning journey in Java Full Stack Development.
+objective:
+Build a RESTful API for managing employee data.
 
-## Notes
-- By default app uses H2 in-memory database for quick testing.
-- To use MySQL, update `src/main/resources/application.properties` with MySQL datasource and credentials.
-- Schema and sample data provided in `schema.sql`.
-- Swagger UI is available at: http://localhost:8080/swagger-ui.html (after app starts)
+Implement Spring Boot with layered architecture (Controller → Service → Repository).
+
+Integrate MySQL database using Spring Data JPA.
+
+Add validation, exception handling, and clean coding practices.
+
+Practice real-world backend project development as part of my MCA course and full-stack learning.
+
+Tech Stack
+
+| Category            | Technology                  |
+| ------------------- | --------------------------- |
+| **Language**        | Java 17                     |
+| **Framework**       | Spring Boot 3               |
+| **Database**        | MySQL (H2 used for testing) |
+| **ORM**             | Spring Data JPA             |
+| **Build Tool**      | Maven                       |
+| **Testing Tool**    | Postman                     |
+| **IDE**             | IntelliJ IDEA / Eclipse     |
+| **Version Control** | Git & GitHub                |
+Features
+
+✅ Add a new employee record
+✅ Fetch employee details (single or list)
+✅ Update existing employee information
+✅ Delete employee by ID
+✅ Search employees by department
+✅ Input validation (email, salary, etc.)
+✅ Exception handling for missing or invalid data
+✅ Clean and modular code structure following best practices
+Database Design
+| Column     | Type     | Description                |
+| ---------- | -------- | -------------------------- |
+| id         | INT (PK) | Auto-generated Employee ID |
+| name       | VARCHAR  | Employee name              |
+| email      | VARCHAR  | Unique email ID            |
+| department | VARCHAR  | Department name            |
+| salary     | DOUBLE   | Monthly salary             |
+| Column     | Type     | Description                |
+
+API Endpoints
+| ---------- | -------- | -------------------------- |
+| id         | INT (PK) | Auto-generated Employee ID |
+| name       | VARCHAR  | Employee name              |
+| email      | VARCHAR  | Unique email ID            |
+| department | VARCHAR  | Department name            |
+| salary     | DOUBLE   | Monthly salary             |
+
+Setup & Run Instructions
+git clone https://github.com/katukurijaswanth2/employee_management.git
+cd employee_management
+2. Configure Database
+
+Open src/main/resources/application.properties and update:
+
+
